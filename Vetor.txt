@@ -1,0 +1,26 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int vetor[5] = {0,0,0,0,0};
+    int numeros;
+    
+    printf("digite qualquer valor de 0 a 99999: ");
+    scanf("%d", &numeros);
+  
+    if(numeros < 0 || numeros > 99999){
+        printf("\n");
+        return 1;
+    }
+    for(int i = 4; i >= 0; i--){
+    vetor[i] = numeros % 10;
+    numeros /= 10;
+}
+for(int i = 0; i < 5; i++){
+    printf("%d", vetor[i]);
+    if( i < 4){
+        printf(", ");
+    }
+}
+return 0;
+}
